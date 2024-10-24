@@ -2,13 +2,13 @@ import coin from '../../assets/coin.png'
 import logo from '../../assets/logo.png'
 const Navbar = () => {
     return (
-        <div className="my-8 flex flex-col md:flex-row md:justify-between items-center space-y-4">
+        <div className="w-[82.5%] mx-auto my-8 flex flex-col md:flex-row md:justify-between items-center space-y-4">
             <div className=''>
                 <img src={logo} alt="" />
             </div>
             <div className='flex flex-col md:flex-row items-center'>
                 <div className=''>
-                    <ul className='flex text-base text-[#131313B3] md:space-x-12 space-x-6 mr-6 md:mr-12'>
+                    <ul className='flex text-base text-[#131313B3] md:space-x-12 space-x-6  md:mr-12'>
                         <li><a href="">Home</a></li>
                         <li><a href="">Fixture</a></li>
                         <li><a href="">Teams</a></li>
