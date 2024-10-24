@@ -2,7 +2,7 @@ import React from 'react';
 
 const AvailablePlayers = () => {
     return (
-        <div>
+        <div className='mb-80'>
             AvailablePlayers
         </div>
     );
