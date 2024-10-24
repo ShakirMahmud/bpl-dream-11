@@ -1,6 +1,5 @@
 import './App.css'
-import AvailablePlayers from './components/Players/AvailablePlayers'
-import SelectedPlayers from './components/Players/SelectedPlayers'
+import SelectedBtn from './components/Players/SelectedBtn'
 import Banner from './components/StaticSections/Banner'
 import Footer from './components/StaticSections/Footer'
 import Navbar from './components/StaticSections/Navbar'
@@ -15,10 +14,8 @@ function App() {
     <Navbar></Navbar>
     {/* banner section  */}
     <Banner></Banner>
-    {/* available player section  */}
-    <AvailablePlayers></AvailablePlayers>
-    {/* selected player section  */}
-    <SelectedPlayers></SelectedPlayers>
+    {/* selected section  */}
+    <SelectedBtn></SelectedBtn>
     {/* newsletter section  */}
     <Newsletter></Newsletter>
     {/* footer section  */}
