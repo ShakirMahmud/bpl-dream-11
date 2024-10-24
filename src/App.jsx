@@ -20,7 +20,6 @@ function App() {
     <Newsletter></Newsletter>
     {/* footer section  */}
     <Footer></Footer>
-      
     </>
   )
 }
