@@ -1,7 +1,7 @@
 import { BsFlagFill } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import PropTypes from 'prop-types';
-const AvailablePlayers = ({ player }) => {
+const AvailablePlayers = ({ player, handleChosePlayers }) => {
     const { image, name, country, role, battingType, bowlingType, biddingPrice } = player;
     return (
         <div className='md:p-4 p-2 border border-[#1313131A] rounded-2xl'>
@@ -27,7 +27,9 @@ const AvailablePlayers = ({ player }) => {
                     </div>
                     <div className="flex justify-between mt-3">
                         <p className="text-base font-[700]">Price: ${biddingPrice}</p>
-                        <button className="border border-[#1313131A] rounded-lg px-4 py-2">Choose Player</button>
+                        <button
+                        onClick={()=>handleChosePlayers(player)}
+                        className="border border-[#1313131A] rounded-lg px-4 py-2">Choose Player</button>
                     </div>
                 </div>
                 
@@ -37,7 +39,8 @@ const AvailablePlayers = ({ player }) => {
 };
 
 AvailablePlayers.propTypes = {
-    players: PropTypes.arrayOf(PropTypes.object).isRequired,
+    players: PropTypes.arrayOf(PropTypes.object),
+    handleChosePlayers: PropTypes.func.isRequired,
     player: PropTypes.shape({
         image: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,

@@ -1,5 +1,6 @@
 import banner from '../../assets/banner-main.png'
 import bg_shadow from '../../assets/bg-shadow.png'
+import PropTypes from "prop-types";
 const Banner = ({handleCoinClick}) => {
     return (
         <div className="w-[82.5%] mx-auto bg-cover relative md:py-16 py-8 bg-[#131313] overflow-hidden rounded-3xl"
@@ -18,4 +19,7 @@ const Banner = ({handleCoinClick}) => {
     );
 };
 
+Banner.propTypes = {
+    handleCoinClick: PropTypes.func.isRequired,
+};
 export default Banner;

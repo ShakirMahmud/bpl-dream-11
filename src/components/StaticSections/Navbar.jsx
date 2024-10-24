@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import coin_icon from '../../assets/coin.png'
 import logo from '../../assets/logo.png'
+import PropTypes from "prop-types";
 const Navbar = ({coin}) => {
     
     return (
@@ -24,6 +24,10 @@ const Navbar = ({coin}) => {
             </div>
         </div>
     );
+};
+
+Navbar.propTypes = {
+    coin: PropTypes.number.isRequired,
 };
 
 export default Navbar;

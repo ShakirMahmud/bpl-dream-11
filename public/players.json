@@ -1,14 +1,5 @@
 [
-    {
-      "playerId": 1,
-      "name": "Shakib Al Hasan",
-      "country": "Bangladesh",
-      "image": "https://i.ibb.co.com/8NPJQBr/sakib.webp",
-      "role": "All-Rounder",
-      "battingType": "Left-hand bat",
-      "bowlingType": "Left-arm orthodox",
-      "biddingPrice": 1500000
-    },
+    
     {
       "playerId": 2,
       "name": "Mushfiqur Rahim",
@@ -17,7 +8,7 @@
       "role": "Wicketkeeper-Batsman",
       "battingType": "Right-hand bat",
       "bowlingType": "N/A",
-      "biddingPrice": 1200000
+      "biddingPrice": 120000
     },
     {
       "playerId": 3,
@@ -27,7 +18,7 @@
       "role": "Batsman",
       "battingType": "Left-hand bat",
       "bowlingType": "Right-arm off-break",
-      "biddingPrice": 1300000
+      "biddingPrice": 130000
     },
     {
       "playerId": 4,
@@ -37,7 +28,7 @@
       "role": "Bowler",
       "battingType": "Left-hand bat",
       "bowlingType": "Left-arm fast-medium",
-      "biddingPrice": 1400000
+      "biddingPrice": 140000
     },
     {
       "playerId": 5,
@@ -47,7 +38,7 @@
       "role": "All-Rounder",
       "battingType": "Right-hand bat",
       "bowlingType": "Right-arm off-break",
-      "biddingPrice": 1250000
+      "biddingPrice": 125000
     },
     {
       "playerId": 6,
@@ -57,7 +48,7 @@
       "role": "Wicketkeeper-Batsman",
       "battingType": "Right-hand bat",
       "bowlingType": "N/A",
-      "biddingPrice": 1100000
+      "biddingPrice": 110000
     },
     {
       "playerId": 7,
@@ -67,7 +58,7 @@
       "role": "Bowler",
       "battingType": "Right-hand bat",
       "bowlingType": "Right-arm fast",
-      "biddingPrice": 1350000
+      "biddingPrice": 135000
     },
     {
       "playerId": 8,
@@ -77,7 +68,7 @@
       "role": "Batsman",
       "battingType": "Right-hand bat",
       "bowlingType": "Right-arm medium",
-      "biddingPrice": 1500000
+      "biddingPrice": 150000
     },
     {
       "playerId": 9,
@@ -87,7 +78,7 @@
       "role": "All-Rounder",
       "battingType": "Left-hand bat",
       "bowlingType": "Right-arm fast-medium",
-      "biddingPrice": 1600000
+      "biddingPrice": 160000
     },
     {
       "playerId": 10,
@@ -97,7 +88,7 @@
       "role": "Bowler",
       "battingType": "Right-hand bat",
       "bowlingType": "Leg-break googly",
-      "biddingPrice": 1400000
+      "biddingPrice": 140000
     },
     {
       "playerId": 11,
@@ -107,7 +98,7 @@
       "role": "Batsman",
       "battingType": "Right-hand bat",
       "bowlingType": "Right-arm off-break",
-      "biddingPrice": 1300000
+      "biddingPrice": 130000
     },
     {
       "playerId": 12,
@@ -117,7 +108,7 @@
       "role": "Batsman",
       "battingType": "Left-hand bat",
       "bowlingType": "Right-arm leg-break",
-      "biddingPrice": 1700000
+      "biddingPrice": 170000
     },
     {
       "playerId": 13,
@@ -127,7 +118,7 @@
       "role": "All-Rounder",
       "battingType": "Right-hand bat",
       "bowlingType": "Right-arm fast",
-      "biddingPrice": 1900000
+      "biddingPrice": 190000
     },
     {
       "playerId": 14,
@@ -137,7 +128,7 @@
       "role": "Wicketkeeper-Batsman",
       "battingType": "Right-hand bat",
       "bowlingType": "N/A",
-      "biddingPrice": 1500000
+      "biddingPrice": 150000
     },
     {
       "playerId": 15,
@@ -147,7 +138,7 @@
       "role": "Bowler",
       "battingType": "Left-hand bat",
       "bowlingType": "Left-arm fast-medium",
-      "biddingPrice": 1700000
+      "biddingPrice": 170000
     }
   ]
   

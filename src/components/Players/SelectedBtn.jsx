@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react';
 import AvailablePlayers from './AvailablePlayers';
 import SelectedPlayers from './SelectedPlayers';
+import PropTypes from 'prop-types';
+import { toast } from 'react-toastify';
 
-const SelectedBtn = () => {
+
+const SelectedBtn = ({ coin, handleNewCoin }) => {
     const [players, setPlayers] = useState([]);
     const [visibleSection, setVisibleSection] = useState(true);
+    const [chosePlayer, setChosePlayer] = useState([]);
 
     const availableSection = () => {
         setVisibleSection(true);
@@ -19,8 +23,32 @@ const SelectedBtn = () => {
             .then(data => setPlayers(data))
     }), [])
 
+    const handleChosePlayers = (player) => {
+        // Check if the player is already added
+        const isAlreadyChosen = chosePlayer.find(p => p.playerId === player.playerId);
+
+        if (isAlreadyChosen) {
+            toast.warn(`${player.name} is already added!`);
+            return;
+        }
+
+        if (coin < player.biddingPrice) {
+            toast.error(`Failed to buy ${player.name}. You don't have enough coins!`);
+            return;
+        }
+
+        // Add player if not already chosen
+        setChosePlayer(prevPlayers => [...prevPlayers, player]);
+        handleNewCoin(player.biddingPrice);
+        toast.success(`${player.name} added successfully!`);
+    };
+
+
+
+
     return (
         <div className='mb-80 mt-20  w-[82.5%] mx-auto'>
+
             <div
                 className=" flex justify-between items-center"
             >
@@ -43,7 +71,7 @@ const SelectedBtn = () => {
                             : 'text-[#13131399] border border-[#1313131A]'
                             }`}
                     >
-                        Selected ()
+                        Selected ({chosePlayer.length})
                     </button>
                 </div>
             </div>
@@ -54,15 +82,26 @@ const SelectedBtn = () => {
                             players.map(player => <AvailablePlayers
                                 key={player.playerId}
                                 player={player}
+                                handleChosePlayers={handleChosePlayers}
                             ></AvailablePlayers>)
                         }
                     </div>
                 ) : (
-                    <SelectedPlayers></SelectedPlayers>
+                    <div>
+                        {
+                            chosePlayer.map(player => <SelectedPlayers key={player.playerId} player={player}></SelectedPlayers>)
+                        }
+                        
+                    </div>
                 )}
             </div>
         </div >
     );
+};
+
+SelectedBtn.propTypes = {
+    coin: PropTypes.number,
+    handleNewCoin: PropTypes.func,
 };
 
 export default SelectedBtn;
