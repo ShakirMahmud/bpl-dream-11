@@ -1,6 +1,8 @@
-import coin from '../../assets/coin.png'
+import { useState } from 'react';
+import coin_icon from '../../assets/coin.png'
 import logo from '../../assets/logo.png'
-const Navbar = () => {
+const Navbar = ({coin}) => {
+    
     return (
         <div className="w-[82.5%] mx-auto my-8 flex flex-col md:flex-row md:justify-between items-center space-y-4">
             <div className=''>
@@ -15,8 +17,9 @@ const Navbar = () => {
                         <li><a href="">Schedules</a></li>
                     </ul>
                 </div>
-                <div className='flex space-x-2 border border-[#1313131A] rounded-xl px-5 py-4 mt-4 md:mt-0 font-[600]'>
-                    <span className='mr-2'>0 </span> Coin  <img className='w-6' src={coin}/>
+                <div
+                 className='flex space-x-2 border border-[#1313131A] rounded-xl px-5 py-4 mt-4 md:mt-0 font-[600]'>
+                    <span className='mr-2'>{coin}</span> Coin  <img className='w-6' src={coin_icon}/>
                 </div>
             </div>
         </div>
