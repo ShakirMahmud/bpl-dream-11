@@ -52,10 +52,9 @@ const SelectedBtn = ({ coin, handleNewCoin, handleNewCoinAfterDeletion }) => {
     }
 
     return (
-        <div className='mb-80 mt-20  w-[82.5%] mx-auto'>
-
+        <div className='mb-80 mt-8 md:mt-16  w-[82.5%] mx-auto'>
             <div
-                className=" flex justify-between items-center"
+                className=" flex justify-between items-center "
             >
                 <h3 className="text-2xl font-[700]">{visibleSection ? 'Available Players' : `Selected Players (${chosePlayer.length}/6)`}</h3>
                 <div>
@@ -63,7 +62,7 @@ const SelectedBtn = ({ coin, handleNewCoin, handleNewCoinAfterDeletion }) => {
                         <div className="flex flex-col md:flex-row w-full">
                             <button
                                 onClick={availableSection}
-                                className={`flex-1 px-5 py-4 md:border-l-0 md:rounded-none md:rounded-tl-xl md:rounded-bl-xl rounded-xl ${visibleSection
+                                className={`flex-1 px-5 py-4 md:border-r-0 md:rounded-none md:rounded-tl-xl md:rounded-bl-xl rounded-xl ${visibleSection
                                     ? 'bg-[#E7FE29] text-black font-[700]'
                                     : 'text-[#13131399] border border-[#1313131A]'
                                     }`}
@@ -80,9 +79,7 @@ const SelectedBtn = ({ coin, handleNewCoin, handleNewCoinAfterDeletion }) => {
                                 Selected ({chosePlayer.length})
                             </button>
                         </div>
-
                     </div>
-
                 </div>
             </div>
             <div className="mt-10 ">
