@@ -24,7 +24,7 @@ const SelectedBtn = ({ coin, handleNewCoin, handleNewCoinAfterDeletion }) => {
 
     const handleChosePlayers = (player) => {
         const isAlreadyChosen = chosePlayer.find(p => p.playerId === player.playerId);
-        
+
         if (chosePlayer.length > 5) {
             toast.error("You can't add more than 6 players!");
             return;
@@ -44,7 +44,7 @@ const SelectedBtn = ({ coin, handleNewCoin, handleNewCoinAfterDeletion }) => {
         toast.success(`${player.name} added successfully!`);
         console.log(chosePlayer.length)
     };
-    const handleDeletion =(deletedPlayer)=>{
+    const handleDeletion = (deletedPlayer) => {
         const remainingPlayers = chosePlayer.filter(player => player.playerId !== deletedPlayer.playerId);
         setChosePlayer(remainingPlayers);
         toast.success(`${deletedPlayer.name} removed successfully and ${deletedPlayer.biddingPrice} coins added to your account back!`);
@@ -59,24 +59,30 @@ const SelectedBtn = ({ coin, handleNewCoin, handleNewCoinAfterDeletion }) => {
             >
                 <h3 className="text-2xl font-[700]">{visibleSection ? 'Available Players' : `Selected Players (${chosePlayer.length}/6)`}</h3>
                 <div>
-                    <button
-                        onClick={availableSection}
-                        className={`px-5 py-4 md:border-l-0 md:rounded-none md:rounded-tl-xl md:rounded-bl-xl rounded-xl ${visibleSection
-                            ? 'bg-[#E7FE29] text-black font-[700]'
-                            : 'text-[#13131399] border border-[#1313131A]'
-                            } `}
-                    >
-                        Available
-                    </button>
-                    <button
-                        onClick={selectedSection}
-                        className={`px-5 py-4  md:border-l-0 md:rounded-none md:rounded-tr-xl md:rounded-br-xl rounded-xl mt-3 md:mt-0 ${!visibleSection
-                            ? 'bg-[#E7FE29] text-black font-[700]'
-                            : 'text-[#13131399] border border-[#1313131A]'
-                            }`}
-                    >
-                        Selected ({chosePlayer.length})
-                    </button>
+                    <div className="flex flex-col md:flex-row w-full">
+                        <div className="flex flex-col md:flex-row w-full">
+                            <button
+                                onClick={availableSection}
+                                className={`flex-1 px-5 py-4 md:border-l-0 md:rounded-none md:rounded-tl-xl md:rounded-bl-xl rounded-xl ${visibleSection
+                                    ? 'bg-[#E7FE29] text-black font-[700]'
+                                    : 'text-[#13131399] border border-[#1313131A]'
+                                    }`}
+                            >
+                                Available
+                            </button>
+                            <button
+                                onClick={selectedSection}
+                                className={`flex-1 px-5 py-4 md:border-l-0 md:rounded-none md:rounded-tr-xl md:rounded-br-xl rounded-xl mt-3 md:mt-0 ${!visibleSection
+                                    ? 'bg-[#E7FE29] text-black font-[700]'
+                                    : 'text-[#13131399] border border-[#1313131A]'
+                                    } whitespace-nowrap`}
+                            >
+                                Selected ({chosePlayer.length})
+                            </button>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
             <div className="mt-10 ">
@@ -93,13 +99,13 @@ const SelectedBtn = ({ coin, handleNewCoin, handleNewCoinAfterDeletion }) => {
                 ) : (
                     <div>
                         {
-                            chosePlayer.map(player => <SelectedPlayers key={player.playerId} 
+                            chosePlayer.map(player => <SelectedPlayers key={player.playerId}
                                 handleDeletion={handleDeletion}
                                 player={player}></SelectedPlayers>)
                         }
                         <div className='p-2 border mt-6 border-[#E7FE29] bg-[#FFFFFF0D] rounded-2xl w-fit'>
                             <button
-                            onClick={availableSection}
+                                onClick={availableSection}
                                 className='rounded-xl bg-[#E7FE29] text-[#131313] font-[700] px-5 py-4'>Add More Player</button>
                         </div>
                     </div>
