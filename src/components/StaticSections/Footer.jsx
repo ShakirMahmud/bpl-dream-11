@@ -4,8 +4,8 @@ const Footer = () => {
         <div className='bg-[#06091A] text-white'>
 
             <div className="w-[82.5%] flex justify-center flex-col items-center mx-auto   ">
-                <img className='mt-60' src={footer_logo} alt="" />
-                <div className='mt-16 mb-16 flex md:flex-row flex-col justify-between lg:space-x-40'>
+                <img className='mt-72' src={footer_logo} alt="" />
+                <div className='mt-16 mb-16 flex md:flex-row flex-col p-3 justify-between lg:space-x-40'>
                     <div className='flex justify-around '>
                         <div className='w-2/3'>
                             <h4 className='text-lg font-[600] mb-4'>About Us</h4>
