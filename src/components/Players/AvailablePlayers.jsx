@@ -21,18 +21,17 @@ const AvailablePlayers = ({ player, handleChosePlayers }) => {
                 </div>
                 <div className="mt-4">
                     <p className="text-base font-[700]">Rating</p>
-                    <div className="flex justify-between mt-3">
+                    <div className="flex justify-between lg:items-center mt-3">
                         <p className="text-base font-[700]">{battingType}</p>
                         <p className="text-base text-[#131313B3]">{bowlingType}</p>
                     </div>
-                    <div className="flex justify-between mt-3">
+                    <div className="flex lg:flex-row flex-col lg:items-center justify-between mt-3">
                         <p className="text-base font-[700]">Price: ${biddingPrice}</p>
                         <button
                         onClick={()=>handleChosePlayers(player)}
-                        className="border border-[#1313131A] rounded-lg px-4 py-2">Choose Player</button>
+                        className="border border-[#1313131A] mt-3 lg:mt-0 rounded-lg px-4 py-2">Choose Player</button>
                     </div>
                 </div>
-                
             </div>
         </div>
     );

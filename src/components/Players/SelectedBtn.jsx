@@ -4,8 +4,7 @@ import SelectedPlayers from './SelectedPlayers';
 import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 
-
-const SelectedBtn = ({ coin, handleNewCoin }) => {
+const SelectedBtn = ({ coin, handleNewCoin, handleNewCoinAfterDeletion }) => {
     const [players, setPlayers] = useState([]);
     const [visibleSection, setVisibleSection] = useState(true);
     const [chosePlayer, setChosePlayer] = useState([]);
@@ -24,27 +23,33 @@ const SelectedBtn = ({ coin, handleNewCoin }) => {
     }), [])
 
     const handleChosePlayers = (player) => {
-        // Check if the player is already added
         const isAlreadyChosen = chosePlayer.find(p => p.playerId === player.playerId);
+        
+        if (chosePlayer.length > 5) {
+            toast.error("You can't add more than 6 players!");
+            return;
+        }
+        if (coin < player.biddingPrice) {
+            toast.error(`Failed to buy ${player.name}. You don't have enough coins!`);
+            return;
+        }
 
         if (isAlreadyChosen) {
             toast.warn(`${player.name} is already added!`);
             return;
         }
 
-        if (coin < player.biddingPrice) {
-            toast.error(`Failed to buy ${player.name}. You don't have enough coins!`);
-            return;
-        }
-
-        // Add player if not already chosen
         setChosePlayer(prevPlayers => [...prevPlayers, player]);
         handleNewCoin(player.biddingPrice);
         toast.success(`${player.name} added successfully!`);
+        console.log(chosePlayer.length)
     };
-
-
-
+    const handleDeletion =(deletedPlayer)=>{
+        const remainingPlayers = chosePlayer.filter(player => player.playerId !== deletedPlayer.playerId);
+        setChosePlayer(remainingPlayers);
+        toast.success(`${deletedPlayer.name} removed successfully and ${deletedPlayer.biddingPrice} coins added to your account back!`);
+        handleNewCoinAfterDeletion(deletedPlayer.biddingPrice);
+    }
 
     return (
         <div className='mb-80 mt-20  w-[82.5%] mx-auto'>
@@ -52,12 +57,12 @@ const SelectedBtn = ({ coin, handleNewCoin }) => {
             <div
                 className=" flex justify-between items-center"
             >
-                <h3 className="text-2xl font-[700]">Available Players</h3>
+                <h3 className="text-2xl font-[700]">{visibleSection ? 'Available Players' : `Selected Players (${chosePlayer.length}/6)`}</h3>
                 <div>
                     <button
                         onClick={availableSection}
-                        className={`px-5 py-4 rounded-tl-xl rounded-bl-xl ${visibleSection
-                            ? 'bg-[#E7FE29] text-black font-[700]' // Highlight active button
+                        className={`px-5 py-4 rounded-tl-xl border-r-0 rounded-bl-xl ${visibleSection
+                            ? 'bg-[#E7FE29] text-black font-[700]'
                             : 'text-[#13131399] border border-[#1313131A]'
                             } `}
                     >
@@ -65,9 +70,9 @@ const SelectedBtn = ({ coin, handleNewCoin }) => {
                     </button>
                     <button
                         id="selected_btn"
-                        onClick={selectedSection} // Switch to Selected Players
+                        onClick={selectedSection}
                         className={`px-5 py-4  border-l-0 rounded-tr-xl rounded-br-xl ${!visibleSection
-                            ? 'bg-[#E7FE29] text-black font-[700]' // Highlight active button
+                            ? 'bg-[#E7FE29] text-black font-[700]'
                             : 'text-[#13131399] border border-[#1313131A]'
                             }`}
                     >
@@ -89,9 +94,15 @@ const SelectedBtn = ({ coin, handleNewCoin }) => {
                 ) : (
                     <div>
                         {
-                            chosePlayer.map(player => <SelectedPlayers key={player.playerId} player={player}></SelectedPlayers>)
+                            chosePlayer.map(player => <SelectedPlayers key={player.playerId} 
+                                handleDeletion={handleDeletion}
+                                player={player}></SelectedPlayers>)
                         }
-                        
+                        <div className='p-2 border mt-6 border-[#E7FE29] bg-[#FFFFFF0D] rounded-2xl w-fit'>
+                            <button
+                            onClick={availableSection}
+                                className='rounded-xl bg-[#E7FE29] text-[#131313] font-[700] px-5 py-4'>Add More Player</button>
+                        </div>
                     </div>
                 )}
             </div>

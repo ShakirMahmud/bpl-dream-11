@@ -1,144 +1,145 @@
 [
-    
-    {
-      "playerId": 2,
-      "name": "Mushfiqur Rahim",
-      "country": "Bangladesh",
-      "image": "https://i.ibb.co.com/WpR89sD/Mushfiq.jpg",
-      "role": "Wicketkeeper-Batsman",
-      "battingType": "Right-hand bat",
-      "bowlingType": "N/A",
-      "biddingPrice": 120000
-    },
-    {
-      "playerId": 3,
-      "name": "Tamim Iqbal",
-      "country": "Bangladesh",
-      "image": "https://i.ibb.co.com/BCh4Ngr/tamim.webp",
-      "role": "Batsman",
-      "battingType": "Left-hand bat",
-      "bowlingType": "Right-arm off-break",
-      "biddingPrice": 130000
-    },
-    {
-      "playerId": 4,
-      "name": "Mustafizur Rahman",
-      "country": "Bangladesh",
-      "image": "https://i.ibb.co.com/QJDfpWm/mustafiz.webp",
-      "role": "Bowler",
-      "battingType": "Left-hand bat",
-      "bowlingType": "Left-arm fast-medium",
-      "biddingPrice": 140000
-    },
-    {
-      "playerId": 5,
-      "name": "Mahmudullah Riyad",
-      "country": "Bangladesh",
-      "image": "https://i.ibb.co.com/dcPNvRr/riad.jpg",
-      "role": "All-Rounder",
-      "battingType": "Right-hand bat",
-      "bowlingType": "Right-arm off-break",
-      "biddingPrice": 125000
-    },
-    {
-      "playerId": 6,
-      "name": "Liton Das",
-      "country": "Bangladesh",
-      "image": "https://i.ibb.co.com/CzXhfH7/liton.png",
-      "role": "Wicketkeeper-Batsman",
-      "battingType": "Right-hand bat",
-      "bowlingType": "N/A",
-      "biddingPrice": 110000
-    },
-    {
-      "playerId": 7,
-      "name": "Taskin Ahmed",
-      "country": "Bangladesh",
-      "image": "https://i.ibb.co.com/KD6jhWV/taskin.png",
-      "role": "Bowler",
-      "battingType": "Right-hand bat",
-      "bowlingType": "Right-arm fast",
-      "biddingPrice": 135000
-    },
-    {
-      "playerId": 8,
-      "name": "Virat Kohli",
-      "country": "India",
-      "image": "https://i.ibb.co.com/0YFJ5zT/virat.png",
-      "role": "Batsman",
-      "battingType": "Right-hand bat",
-      "bowlingType": "Right-arm medium",
-      "biddingPrice": 150000
-    },
-    {
-      "playerId": 9,
-      "name": "Ben Stokes",
-      "country": "England",
-      "image": "https://i.ibb.co.com/kmq08T4/ben.png",
-      "role": "All-Rounder",
-      "battingType": "Left-hand bat",
-      "bowlingType": "Right-arm fast-medium",
-      "biddingPrice": 160000
-    },
-    {
-      "playerId": 10,
-      "name": "Rashid Khan",
-      "country": "Afghanistan",
-      "image": "https://i.ibb.co.com/6rjrrNM/rashid.jpg",
-      "role": "Bowler",
-      "battingType": "Right-hand bat",
-      "bowlingType": "Leg-break googly",
-      "biddingPrice": 140000
-    },
-    {
-      "playerId": 11,
-      "name": "Kane Williamson",
-      "country": "New Zealand",
-      "image": "https://i.ibb.co.com/zxdLMWC/ken.png",
-      "role": "Batsman",
-      "battingType": "Right-hand bat",
-      "bowlingType": "Right-arm off-break",
-      "biddingPrice": 130000
-    },
-    {
-      "playerId": 12,
-      "name": "David Warner",
-      "country": "Australia",
-      "image": "https://i.ibb.co.com/qnshqny/warner.png",
-      "role": "Batsman",
-      "battingType": "Left-hand bat",
-      "bowlingType": "Right-arm leg-break",
-      "biddingPrice": 170000
-    },
-    {
-      "playerId": 13,
-      "name": "Andre Russell",
-      "country": "West Indies",
-      "image": "https://i.ibb.co.com/QFGYH5J/russel.jpg",
-      "role": "All-Rounder",
-      "battingType": "Right-hand bat",
-      "bowlingType": "Right-arm fast",
-      "biddingPrice": 190000
-    },
-    {
-      "playerId": 14,
-      "name": "Jos Buttler",
-      "country": "England",
-      "image": "https://i.ibb.co.com/7vT9V8Z/buttler.png",
-      "role": "Wicketkeeper-Batsman",
-      "battingType": "Right-hand bat",
-      "bowlingType": "N/A",
-      "biddingPrice": 150000
-    },
-    {
-      "playerId": 15,
-      "name": "Trent Boult",
-      "country": "New Zealand",
-      "image": "https://i.ibb.co.com/GvTW7Jk/bolt.png",
-      "role": "Bowler",
-      "battingType": "Left-hand bat",
-      "bowlingType": "Left-arm fast-medium",
-      "biddingPrice": 170000
-    }
-  ]
+  {
+    "playerId": 8,
+    "name": "Virat Kohli",
+    "country": "India",
+    "image": "https://i.ibb.co.com/0YFJ5zT/virat.png",
+    "role": "Batsman",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm medium",
+    "biddingPrice": 150000
+  },
+  {
+    "playerId": 2,
+    "name": "Mushfiqur Rahim",
+    "country": "Bangladesh",
+    "image": "https://i.ibb.co.com/WpR89sD/Mushfiq.jpg",
+    "role": "Wicketkeeper-Batsman",
+    "battingType": "Right-hand bat",
+    "bowlingType": "N/A",
+    "biddingPrice": 120000
+  },
+  {
+    "playerId": 11,
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "image": "https://i.ibb.co.com/zxdLMWC/ken.png",
+    "role": "Batsman",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm off-break",
+    "biddingPrice": 130000
+  },
+  {
+    "playerId": 3,
+    "name": "Tamim Iqbal",
+    "country": "Bangladesh",
+    "image": "https://i.ibb.co.com/BCh4Ngr/tamim.webp",
+    "role": "Batsman",
+    "battingType": "Left-hand bat",
+    "bowlingType": "Right-arm off-break",
+    "biddingPrice": 130000
+  },
+  {
+    "playerId": 4,
+    "name": "Mustafizur Rahman",
+    "country": "Bangladesh",
+    "image": "https://i.ibb.co.com/QJDfpWm/mustafiz.webp",
+    "role": "Bowler",
+    "battingType": "Left-hand bat",
+    "bowlingType": "Left-arm fast-medium",
+    "biddingPrice": 140000
+  },
+  {
+    "playerId": 15,
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "image": "https://i.ibb.co.com/GvTW7Jk/bolt.png",
+    "role": "Bowler",
+    "battingType": "Left-hand bat",
+    "bowlingType": "Left-arm fast-medium",
+    "biddingPrice": 170000
+  },
+  {
+    "playerId": 5,
+    "name": "Mahmudullah Riyad",
+    "country": "Bangladesh",
+    "image": "https://i.ibb.co.com/dcPNvRr/riad.jpg",
+    "role": "All-Rounder",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm off-break",
+    "biddingPrice": 125000
+  },
+  {
+    "playerId": 6,
+    "name": "Liton Das",
+    "country": "Bangladesh",
+    "image": "https://i.ibb.co.com/CzXhfH7/liton.png",
+    "role": "Wicketkeeper-Batsman",
+    "battingType": "Right-hand bat",
+    "bowlingType": "N/A",
+    "biddingPrice": 110000
+  },
+  {
+    "playerId": 7,
+    "name": "Taskin Ahmed",
+    "country": "Bangladesh",
+    "image": "https://i.ibb.co.com/KD6jhWV/taskin.png",
+    "role": "Bowler",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm fast",
+    "biddingPrice": 135000
+  },
+
+  {
+    "playerId": 9,
+    "name": "Ben Stokes",
+    "country": "England",
+    "image": "https://i.ibb.co.com/kmq08T4/ben.png",
+    "role": "All-Rounder",
+    "battingType": "Left-hand bat",
+    "bowlingType": "Right-arm fast-medium",
+    "biddingPrice": 160000
+  },
+  {
+    "playerId": 10,
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "image": "https://i.ibb.co.com/6rjrrNM/rashid.jpg",
+    "role": "Bowler",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Leg-break googly",
+    "biddingPrice": 140000
+  },
   
+  {
+    "playerId": 12,
+    "name": "David Warner",
+    "country": "Australia",
+    "image": "https://i.ibb.co.com/qnshqny/warner.png",
+    "role": "Batsman",
+    "battingType": "Left-hand bat",
+    "bowlingType": "Right-arm leg-break",
+    "biddingPrice": 170000
+  },
+  {
+    "playerId": 13,
+    "name": "Andre Russell",
+    "country": "West Indies",
+    "image": "https://i.ibb.co.com/QFGYH5J/russel.jpg",
+    "role": "All-Rounder",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm fast",
+    "biddingPrice": 190000
+  },
+  {
+    "playerId": 14,
+    "name": "Jos Buttler",
+    "country": "England",
+    "image": "https://i.ibb.co.com/7vT9V8Z/buttler.png",
+    "role": "Wicketkeeper-Batsman",
+    "battingType": "Right-hand bat",
+    "bowlingType": "N/A",
+    "biddingPrice": 150000
+  }
+ 
+]
