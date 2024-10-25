@@ -61,7 +61,7 @@ const SelectedBtn = ({ coin, handleNewCoin, handleNewCoinAfterDeletion }) => {
                 <div>
                     <button
                         onClick={availableSection}
-                        className={`px-5 py-4 rounded-tl-xl border-r-0 rounded-bl-xl ${visibleSection
+                        className={`px-5 py-4 md:border-l-0 md:rounded-none md:rounded-tl-xl md:rounded-bl-xl rounded-xl ${visibleSection
                             ? 'bg-[#E7FE29] text-black font-[700]'
                             : 'text-[#13131399] border border-[#1313131A]'
                             } `}
@@ -69,9 +69,8 @@ const SelectedBtn = ({ coin, handleNewCoin, handleNewCoinAfterDeletion }) => {
                         Available
                     </button>
                     <button
-                        id="selected_btn"
                         onClick={selectedSection}
-                        className={`px-5 py-4  border-l-0 rounded-tr-xl rounded-br-xl ${!visibleSection
+                        className={`px-5 py-4  md:border-l-0 md:rounded-none md:rounded-tr-xl md:rounded-br-xl rounded-xl mt-3 md:mt-0 ${!visibleSection
                             ? 'bg-[#E7FE29] text-black font-[700]'
                             : 'text-[#13131399] border border-[#1313131A]'
                             }`}
@@ -113,6 +112,7 @@ const SelectedBtn = ({ coin, handleNewCoin, handleNewCoinAfterDeletion }) => {
 SelectedBtn.propTypes = {
     coin: PropTypes.number,
     handleNewCoin: PropTypes.func,
+    handleNewCoinAfterDeletion: PropTypes.func,
 };
 
 export default SelectedBtn;

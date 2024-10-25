@@ -2,7 +2,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import PropTypes from 'prop-types';
 
 const SelectedPlayers = ({ player, handleDeletion }) => {
-    const { name, image, battingType, bowlingType, playerId } = player;
+    const { name, image, battingType, bowlingType } = player;
     return (
         <>
             <div className="p-6 flex flex-col mt-6 border border-[#1313131A] rounded-2xl bg-white shadow-lg">
