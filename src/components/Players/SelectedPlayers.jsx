@@ -2,7 +2,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import PropTypes from 'prop-types';
 
 const SelectedPlayers = ({ player, handleDeletion }) => {
-    const { name, image, battingType, bowlingType } = player;
+    const { name, image, battingType, biddingPrice } = player;
     return (
         <>
             <div className="p-6 flex flex-col mt-6 border border-[#1313131A] rounded-2xl bg-white shadow-lg">
@@ -12,7 +12,7 @@ const SelectedPlayers = ({ player, handleDeletion }) => {
                         <div className='flex flex-col justify-between'>
                             <h4 className='text-2xl font-[600]'>{name}</h4>
                             <p className='text-base text-[#131313B3]'>{battingType}</p>
-                            <p className='text-base text-[#131313B3]'>{bowlingType}</p>
+                            <p className='text-base text-[#131313B3]'>Price: ${biddingPrice}</p>
                         </div>
                     </div>
                     <button
