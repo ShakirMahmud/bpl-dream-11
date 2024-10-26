@@ -50,15 +50,23 @@ const SelectedBtn = ({ coin, handleNewCoin, handleNewCoinAfterDeletion }) => {
         toast.success(`${deletedPlayer.name} removed successfully and ${deletedPlayer.biddingPrice} coins added to your account back!`);
         handleNewCoinAfterDeletion(deletedPlayer.biddingPrice);
     }
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 0);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <div className='mb-80 mt-8 md:mt-16  w-[82.5%] mx-auto'>
             <div
-                className=" flex justify-between items-center "
-            >
+                className={`sticky top-[6.65rem] bg-white/50 backdrop-blur-md z-50 flex justify-between items-center ${scrolled ? 'py-4' : 'py-0'}`}>
                 <h3 className="text-2xl font-[700]">{visibleSection ? 'Available Players' : `Selected Players (${chosePlayer.length}/6)`}</h3>
                 <div>
-                    <div className="flex flex-col md:flex-row w-full">
                         <div className="flex flex-col md:flex-row w-full">
                             <button
                                 onClick={availableSection}
@@ -80,7 +88,6 @@ const SelectedBtn = ({ coin, handleNewCoin, handleNewCoinAfterDeletion }) => {
                             </button>
                         </div>
                     </div>
-                </div>
             </div>
             <div className="mt-10 ">
                 {visibleSection ? (

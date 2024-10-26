@@ -1,10 +1,20 @@
+import { useEffect, useState } from 'react';
 import coin_icon from '../../assets/coin.png'
 import logo from '../../assets/logo.png'
 import PropTypes from "prop-types";
 const Navbar = ({coin}) => {
-    
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 0);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
     return (
-        <div className="w-[82.5%] mx-auto my-8 flex flex-col md:flex-row md:justify-between items-center space-y-4">
+        <div className={`sticky top-0 z-50 w-[82.5%] mx-auto my-8 flex flex-col md:flex-row md:justify-between items-center space-y-4 bg-white/50 backdrop-blur-md ${scrolled ? 'py-4' : 'py-0'}`}>
             <div className=''>
                 <img src={logo} alt="" />
             </div>
